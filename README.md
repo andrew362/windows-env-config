@@ -17,9 +17,6 @@
     ```
     oh-my-posh font install
     ```
-- Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-- .config/powershell/user_profile.ps1
-- .bashrc
 - nvm
     ```
     scoop install nvm
@@ -41,9 +38,13 @@
 
     Set-PSReadLineOption -PredictionSource History
 
-    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-
-    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
     ```
+- Fuzzy Finder
+    ```
+    scoop install fzf
+    Install-Module -Name PSFzf -Scope CurrentUser -Force
+    ```
+- Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+- .config/powershell/user_profile.ps1
+- .bashrc
