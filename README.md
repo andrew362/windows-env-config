@@ -8,6 +8,9 @@
 - Git 
     ```
     winget install --id Git.Git -e --source winget
+
+    git config --global user.name
+    git config --global user.email
     ```
 - Oh-my-posh
     ```
@@ -48,3 +51,11 @@
 - Documents/PowerShell/Microsoft.PowerShell_profile.ps1
 - .config/powershell/user_profile.ps1
 - .bashrc
+- ssh-agent
+    ```
+    Get-Service ssh-agent | Set-Service -StartupType Automatic
+    Start-Service ssh-agent
+    Get-Service ssh-agent
+    ssh-add $env:USERPROFILE\.ssh\KEY #TODO
+    git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
+    ```
