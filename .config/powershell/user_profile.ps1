@@ -51,6 +51,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 #Misc
 Import-Module -Name Terminal-Icons
+Import-Module posh-git
 
 # Utilities
 function which ($command) {

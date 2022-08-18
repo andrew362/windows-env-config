@@ -29,6 +29,10 @@
     scoop bucket add extras
     scoop install terminal-icons
     ```
+- posh-git https://github.com/dahlbyk/posh-git
+    ```
+    scoop install posh-git
+    ```
 - z - dir jumper
     ```
     scoop install z
