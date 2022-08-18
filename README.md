@@ -49,7 +49,7 @@
     Install-Module -Name PSFzf -Scope CurrentUser -Force
     ```
 - Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-- .config/powershell/user_profile.ps1
+- .config/powershell/user_profile.ps1 (check this: https://github.com/PowerShell/PSReadLine/blob/master/PSReadLine/SamplePSReadLineProfile.ps1#L13-L21)
 - .bashrc
 - ssh-agent
     ```
