@@ -17,10 +17,10 @@ Set-Alias -Name gc- -Value get-gc
 Set-Alias -Name push -Value get-push
 
 # PSReadLine
-Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -EditMode Windows #Emacs
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
-Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin #History
 #Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
