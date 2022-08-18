@@ -25,6 +25,8 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin #History
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineKeyHandler -Chord Ctrl+LeftArrow BackwardWord #?
+Set-PSReadLineKeyHandler -Chord Ctrl+RightArrow ForwardWord #?
 
 # `ForwardChar` accepts the entire suggestion text when the cursor is at the end of the line.
 # This custom binding makes `RightArrow` behave similarly - accepting the next word instead of the entire suggestion text.
