@@ -3,6 +3,11 @@
 - PowerShell https://www.microsoft.com/store/productId/9MZ1SNWT0N5D
 - Scoop https://scoop.sh/
     ```
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    irm get.scoop.sh | iex
+    ```
+- curl, sudo, jq
+    ```
     scoop install curl sudo jq
     ```
 - Git 
