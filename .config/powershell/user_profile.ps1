@@ -5,6 +5,11 @@ Function get-gpu { git pull }
 Function get-gma { git checkout master }
 Function get-gc { git checkout - }
 Function get-push { git push }
+Function get-lastBranches { git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' }
+Function get-defaultGitBranch {
+    $defaultBranch = git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+    git checkout $defaultBranch
+}
 
 #Alias
 Set-Alias ll ls -Force
@@ -13,8 +18,10 @@ Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias -Name gpu -Value get-gpu
 Set-Alias -Name gma -Value get-gma
+Set-Alias -Name gcd -Value get-defaultGitBranch
 Set-Alias -Name gc- -Value get-gc
 Set-Alias -Name push -Value get-push
+Set-Alias -Name glb -Value get-lastBranches
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Windows #Emacs
